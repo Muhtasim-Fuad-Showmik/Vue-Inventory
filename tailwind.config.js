@@ -12,7 +12,11 @@ module.exports = {
 			},
 			dropShadow: {
 				'std': '2px 2px 5px rgba(0, 0, 0, 1)',
+			},
+			boxShadow: {
+				'main': '0px 0px 130px -50px #006ce9',
 			}
+		
 		},
 		fontFamily: {
 			Jost: ["Jost, sans-serif"],

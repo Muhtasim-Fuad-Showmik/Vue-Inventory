@@ -4,7 +4,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-	<main class="h-[90vh]">
+	<main class="h-full my-0 mx-auto bg-white rounded box-shadow-main overflow-hidden">
 		<div class="flex flex-row min-h-[90vh]">
 			<div class="w-80 min-h-[90vh]">
 				<header class="h-full flex flex-col bg-white">
@@ -62,12 +62,12 @@ import HelloWorld from './components/HelloWorld.vue'
 				<RouterView />
 			</div>
 		</div>
+		<footer>
+			<a href="https://peaceful-sable-131357.netlify.app/" target="_blank">
+				&#169; Muhtasim Fuad Showmik
+			</a>
+		</footer>
 	</main>
-	<footer>
-		<a href="https://peaceful-sable-131357.netlify.app/" target="_blank">
-        	&#169; Muhtasim Fuad Showmik
-        </a>
-	</footer>
 </template>
 
 <style lang="scss" scoped>
