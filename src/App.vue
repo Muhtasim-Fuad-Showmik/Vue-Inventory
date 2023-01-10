@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -55,11 +54,9 @@ import HelloWorld from './components/HelloWorld.vue'
 				</header>
 			</div>
 			<div class="w-full min-h-[90vh]">
-				<div class="wrapper">
-					<HelloWorld msg="You did it!" />
+				<div class="p-4 h-full border-b-8 border-solid border-brandeis-blue">
+					<RouterView />
 				</div>
-
-				<RouterView />
 			</div>
 		</div>
 	</main>
