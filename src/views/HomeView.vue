@@ -14,19 +14,31 @@ import Card from "../components/Card.vue";
     </div>
 
     <div class="flex justify-between mb-5 max-w-full">
-      <Card customStyle="w-1/3" title="Order Insights" icon="fa-solid
-      fa-clipboard-list" bg="lemon-chiffon" value="{62900}" valuePrefix="$"
-      increased="{true}" increasedByPercentage="{20}" secondaryTitle="Last
-      Month's Order Value" secondaryValue="{89333}" secondaryValuePrefix="$"
-      tertiaryTitle="Outstanding" tertiaryValue="{672000}"
-      tertiaryValuePrefix="$" />
+      <Card
+        customStyle="w-1/3"
+        title="Order Insights"
+        icon="fa-solid
+      fa-clipboard-list"
+        bgIcon="bg-lemon-chiffon text-lemon-chiffon-txt"
+        value=62900
+        valuePrefix="$"
+        increased="{true}"
+        increasedByPercentage="{20}"
+        secondaryTitle="Last
+      Month's Order Value"
+        secondaryValue="{89333}"
+        secondaryValuePrefix="$"
+        tertiaryTitle="Outstanding"
+        tertiaryValue="{672000}"
+        tertiaryValuePrefix="$"
+      />
 
       <Card
         customStyle="w-1/3 ml-5"
         title="Inventory Insights"
         icon="fa-solid fa-dollar-sign"
-        bg="winter-wizard"
-        value="{182900000}"
+        bgIcon="bg-winter-wizard text-winter-wizard-txt"
+        value=182900000
         valuePrefix="$"
         valueHeader="Total Stock Value"
       />
@@ -35,8 +47,8 @@ import Card from "../components/Card.vue";
         customStyle="w-1/3 ml-5"
         title="CoGS Insights"
         icon="fa-solid fa-database"
-        bg="magic-mint"
-        value="{63400}"
+        bgIcon="bg-magic-mint text-magic-mint-txt"
+        value=63400
         valuePrefix="$"
         increased="{false}"
         increasedByPercentage="{10}"

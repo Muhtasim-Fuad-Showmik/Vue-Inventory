@@ -3,6 +3,22 @@
     <div class="font-bold text-lg">
         {{ title }}
     </div>
+
+    <div class="my-2 flex items-center">
+      <div class="w-10 h-10 rounded-full flex items-center justify-center text-xl" :class="bgIcon">
+        <i :class="icon"></i>
+      </div>
+
+      <div class="h-12 mr-2">
+        <p class="h-3 text-xs">{{ valueHeader }}</p>
+        <span class="text-xl font-bold">
+          {{
+            (valuePrefix !== "undefined" ? valuePrefix : '') +
+            (value && value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
+          }}
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -20,7 +36,7 @@ defineProps({
     type: String,
     required: false,
   },
-  bg: {
+  bgIcon: {
     type: String,
     required: false,
   },

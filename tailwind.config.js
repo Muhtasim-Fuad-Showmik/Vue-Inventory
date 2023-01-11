@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable prettier/prettier */
 module.exports = {
 	content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", "./src/*.{vue,js,ts,jsx,tsx}"],
 	theme: {
@@ -9,6 +11,12 @@ module.exports = {
 				'plump-purple': '#713fc2',
 				'selective-yellow': '#ffb703',
 				'caribbean-green': '#02c39a',
+				'lemon-chiffon': '#fbf8cc',
+				'lemon-chiffon-txt': '#423d09',
+				'winter-wizard': '#8eecf5',
+				'winter-wizard-txt': '#053135',
+				'magic-mint': '#b9fbc0',
+				'magic-mint-txt': '#08360d'
 			},
 			dropShadow: {
 				'std': '2px 2px 5px rgba(0, 0, 0, 1)',
