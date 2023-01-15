@@ -1,11 +1,17 @@
 <template>
-  <div class="bg-white shadow min-h-[100px] rounded-lg p-5" :class="customStyle">
+  <div
+    class="bg-white shadow min-h-[100px] rounded-lg p-5"
+    :class="customStyle"
+  >
     <div class="font-bold text-lg">
-        {{ title }}
+      {{ title }}
     </div>
 
     <div class="my-2 flex items-center">
-      <div class="w-10 h-10 rounded-full flex items-center justify-center text-xl" :class="bgIcon">
+      <div
+        class="w-10 h-10 rounded-full flex items-center justify-center text-xl"
+        :class="bgIcon"
+      >
         <i :class="icon"></i>
       </div>
 
@@ -13,9 +19,30 @@
         <p class="h-3 text-xs">{{ valueHeader }}</p>
         <span class="text-xl font-bold">
           {{
-            (valuePrefix !== "undefined" ? valuePrefix : '') +
+            (valuePrefix !== "undefined" ? valuePrefix : "") +
             (value && value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
           }}
+        </span>
+      </div>
+
+      <div class="h-5 w-16 text-xs">
+        <span
+          class="w-full h-full rounded p-1 bg-pistachio text-ao"
+          v-if="increased && increasedByPercentage > 0"
+        >
+          <i class="fa-solid fa-arrow-up"></i>
+          <span>
+            {{ increasedByPercentage }}
+          </span>
+        </span>
+        <span
+          class="w-full h-full rounded p-1 bg-venetian-red text-bright-maroon"
+          v-else-if="!increased && increasedByPercentage > 0"
+        >
+          <i class="fa-solid fa-arrow-down"></i>
+          <span>
+            {{ increasedByPercentage }}
+          </span>
         </span>
       </div>
     </div>
