@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="bg-white shadow min-h-[100px] rounded-lg p-5"
-    :class="customStyle"
-  >
+  <div class="bg-white shadow min-h-[100px] rounded-lg p-5" :class="customStyle">
     <div class="font-bold text-lg">
       {{ title }}
     </div>
@@ -44,6 +41,29 @@
             {{ increasedByPercentage }}
           </span>
         </span>
+      </div>
+    </div>
+
+    <div class="my-2 flex items-center justify-between">
+      <div class="w-1/2">
+        <p class="text-sm">{{ secondaryTitle }}</p>
+        <p class="text-xl font-bold">
+          <span v-if="secondaryValuePrefix">{{ secondaryValuePrefix }}</span>
+          <span v-if="secondaryValue >= 0">{{
+            secondaryValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+          }}</span>
+          <span v-if="secondaryValueSuffix">{{ secondaryValueSuffix }}</span>
+        </p>
+      </div>
+      <div class="w-1/2">
+        <p class="text-sm">{{ tertiaryTitle }}</p>
+        <p class="text-xl font-bold">
+          <span v-if="tertiaryValuePrefix">{{ tertiaryValuePrefix }}</span>
+          <span v-if="tertiaryValue >= 0">{{
+            tertiaryValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+          }}</span>
+          <span v-if="tertiaryValueSuffix">{{ tertiaryValueSuffix }}</span>
+        </p>
       </div>
     </div>
   </div>
@@ -115,7 +135,7 @@ defineProps({
     type: String,
     required: false,
   },
-  olderValueSuffix: {
+  tertiaryValueSuffix: {
     type: String,
     required: false,
   },
