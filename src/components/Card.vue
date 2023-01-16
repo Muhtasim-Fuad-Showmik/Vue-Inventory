@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow min-h-[100px] rounded-lg p-5" :class="customStyle">
+  <div class="bg-white shadow min-h-[100px] border rounded-lg p-5" :class="customStyle">
     <div class="font-bold text-lg">
       {{ title }}
     </div>

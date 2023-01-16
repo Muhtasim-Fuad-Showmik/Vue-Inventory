@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Card from "../components/Card.vue";
+import ContentCard from "../components/ContentCard.vue";
+import ChartJSGraph from "../components/ChartJSGraph.vue";
 </script>
 
 <template>
@@ -19,15 +21,15 @@ import Card from "../components/Card.vue";
         title="Order Insights"
         icon="fa-solid fa-clipboard-list"
         bgIcon="bg-lemon-chiffon text-lemon-chiffon-txt"
-        :value=62900
+        :value="62900"
         valuePrefix="$"
-        :increased=true
-        :increasedByPercentage=20
+        :increased="true"
+        :increasedByPercentage="20"
         secondaryTitle="Last Month's Order Value"
-        :secondaryValue=89333
+        :secondaryValue="89333"
         secondaryValuePrefix="$"
         tertiaryTitle="Outstanding"
-        :tertiaryValue=672000
+        :tertiaryValue="672000"
         tertiaryValuePrefix="$"
       />
 
@@ -36,7 +38,7 @@ import Card from "../components/Card.vue";
         title="Inventory Insights"
         icon="fa-solid fa-dollar-sign"
         bgIcon="bg-winter-wizard text-winter-wizard-txt"
-        :value=182900000
+        :value="182900000"
         valuePrefix="$"
         valueHeader="Total Stock Value"
       />
@@ -46,21 +48,62 @@ import Card from "../components/Card.vue";
         title="CoGS Insights"
         icon="fa-solid fa-database"
         bgIcon="bg-magic-mint text-magic-mint-txt"
-        :value=63400
+        :value="63400"
         valuePrefix="$"
-        :increased=false
-        :increasedByPercentage=10
+        :increased="false"
+        :increasedByPercentage="10"
         secondaryTitle="Cost of Goods Sold %"
-        :secondaryValue=89
+        :secondaryValue="89"
         secondaryValueSuffix=" %"
         tertiaryTitle="Turn Over"
-        :tertiaryValue=675000
+        :tertiaryValue="675000"
         tertiaryValuePrefix="$"
       />
     </div>
 
     <div class="p-2">
       <h1>Report</h1>
+    </div>
+
+    <div class="flex justify-between mb-5 min-w-full p-2">
+      <select
+        class="p-2 rounded-md cursor-pointer font-Sen font-normal border bg-white shadow"
+        name="filterTimeInterval"
+        id="filterTimeIntervalId"
+      >
+        <option value="7">Last 7 days</option>
+        <option value="30">Last month</option>
+        <option value="180">Last 6 months</option>
+        <option value="365">Last year</option>
+      </select>
+    </div>
+
+    <div class="flex justify-between mb-5 min-w-full p-2">
+      <ContentCard customStyle="w-1/2" title="Inventory Value per Outlet">
+        <div className="h-5 w-14 text-sm mt-2">
+          <span
+            className="w-full h-full rounded-md p-1 bg-neutral-200 text-neutral-700"
+            >100%</span
+          >
+        </div>
+
+        <div class="bg-white mt-2">
+          <ChartJSGraph width="100%" height="25px" :chartData="{}" />
+        </div>
+      </ContentCard>
+
+      <ContentCard customStyle="w-1/2 ml-5" title="Monthly Value per Outlet">
+        <div className="h-5 w-14 text-sm mt-2">
+          <span
+            className="w-full h-full rounded-md p-1 bg-neutral-200 text-neutral-700"
+            >100%</span
+          >
+        </div>
+
+        <div class="bg-white mt-2">
+          <ChartJSGraph width="100%" height="25px" :chartData="{}" />
+        </div>
+      </ContentCard>
     </div>
   </main>
 </template>
