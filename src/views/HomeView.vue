@@ -88,7 +88,34 @@ import ChartJSGraph from "../components/ChartJSGraph.vue";
         </div>
 
         <div class="bg-white mt-2">
-          <ChartJSGraph width="100%" height="25px" :chartData="{}" />
+          <ChartJSGraph
+            width="100%"
+            height="25px"
+            :chartData="{
+              labels: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+              ],
+              datasets: [
+                {
+                  label: 'Inventory Value per Outlet',
+                  data: [65, 59, 80, 81, 56, 55, 40],
+                  fill: false,
+                  borderColor: 'rgb(75, 192, 192)',
+                  tension: 0.1,
+                },
+              ],
+            }"
+            :options="{
+              responsive: true,
+              maintainAspectRatio: false,
+            }"
+          />
         </div>
       </ContentCard>
 
@@ -101,7 +128,34 @@ import ChartJSGraph from "../components/ChartJSGraph.vue";
         </div>
 
         <div class="bg-white mt-2">
-          <ChartJSGraph width="100%" height="25px" :chartData="{}" />
+          <ChartJSGraph
+            width="100%"
+            height="25px"
+            :chartData="{
+              labels: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+              ],
+              datasets: [
+                {
+                  label: 'Monthly Order Value per Outlet',
+                  data: [23, 37, 42, 90, 30, 65, 72],
+                  fill: false,
+                  borderColor: 'rgb(0, 108, 233)',
+                  tension: 0.1,
+                },
+              ],
+            }"
+            :options="{
+              responsive: true,
+              maintainAspectRatio: false,
+            }"
+          />
         </div>
       </ContentCard>
     </div>

@@ -1,5 +1,5 @@
 <template>
-    <Line :data="data" :options="options" />
+    <Line :data="chartData" :options="options" />
 </template>
 
 <script>
@@ -31,28 +31,11 @@ export default {
   props: {
     height: String,
     width: String,
-    chartData: Object
+    chartData: Object,
+    options: Object
   },
   components: {
     Line
-  },
-  data() {
-    return {
-        data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            datasets: [
-                {
-                label: 'Data One',
-                backgroundColor: '#f87979',
-                data: [40, 39, 10, 40, 39, 80, 40]
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false
-        }
-    }
   }
 }
 </script>

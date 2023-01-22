@@ -52,7 +52,7 @@ import { RouterLink, RouterView } from "vue-router";
             >
               <RouterLink
                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5"
-                to="/"
+                to="/procurements"
                 >Procurement</RouterLink
               >
             </li>
