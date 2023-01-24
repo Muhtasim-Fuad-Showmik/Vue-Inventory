@@ -1,8 +1,5 @@
 <template>
-    <div
-        class="bg-white shadow min-h-[100px] border rounded-lg p-5"
-        :class="customStyle"
-    >
+    <div class="bg-white shadow min-h-[100px] border rounded-lg p-5" :class="customStyle">
         <span class="text-lg font-bold">{{ title }}</span>
         <slot></slot>
     </div>

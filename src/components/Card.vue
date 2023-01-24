@@ -1,17 +1,11 @@
 <template>
-    <div
-        class="bg-white shadow min-h-[100px] border rounded-lg p-5"
-        :class="customStyle"
-    >
+    <div class="bg-white shadow min-h-[100px] border rounded-lg p-5" :class="customStyle">
         <div class="text-lg font-bold">
             {{ title }}
         </div>
 
         <div class="flex items-center my-2">
-            <div
-                class="flex items-center justify-center w-10 h-10 text-xl rounded-full"
-                :class="bgIcon"
-            >
+            <div class="flex items-center justify-center w-10 h-10 text-xl rounded-full" :class="bgIcon">
                 <i :class="icon"></i>
             </div>
 
@@ -19,29 +13,25 @@
                 <p class="h-3 text-xs">{{ valueHeader }}</p>
                 <span class="text-xl font-bold">
                     {{
-                        (valuePrefix !== 'undefined' ? valuePrefix : '') +
-                        (value &&
-                            value
-                                .toString()
-                                .replace(/\B(?=(\d{3})+(?!\d))/g, ','))
+                    (valuePrefix !== 'undefined' ? valuePrefix : '') +
+    (value &&
+        value
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ','))
                     }}
                 </span>
             </div>
 
             <div class="w-16 h-5 text-xs">
-                <span
-                    class="w-full h-full p-1 rounded bg-pistachio text-ao"
-                    v-if="increased && increasedByPercentage > 0"
-                >
+                <span class="w-full h-full p-1 rounded bg-pistachio text-ao"
+                    v-if="increased && increasedByPercentage > 0">
                     <i class="fa-solid fa-arrow-up"></i>
                     <span>
                         {{ increasedByPercentage }}
                     </span>
                 </span>
-                <span
-                    class="w-full h-full p-1 rounded bg-venetian-red text-bright-maroon"
-                    v-else-if="!increased && increasedByPercentage > 0"
-                >
+                <span class="w-full h-full p-1 rounded bg-venetian-red text-bright-maroon"
+                    v-else-if="!increased && increasedByPercentage > 0">
                     <i class="fa-solid fa-arrow-down"></i>
                     <span>
                         {{ increasedByPercentage }}
@@ -59,7 +49,7 @@
                     }}</span>
                     <span v-if="secondaryValue >= 0">{{
                         secondaryValue
-                            .toString()
+                                            .toString()
                             .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
                     }}</span>
                     <span v-if="secondaryValueSuffix">{{
@@ -75,7 +65,7 @@
                     }}</span>
                     <span v-if="tertiaryValue >= 0">{{
                         tertiaryValue
-                            .toString()
+                                            .toString()
                             .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
                     }}</span>
                     <span v-if="tertiaryValueSuffix">{{
