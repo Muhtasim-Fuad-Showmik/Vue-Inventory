@@ -40,6 +40,32 @@
         />
       </div>
 	  
+	  <div>
+		<select name="date" id="date" class="p-1 rounded cursor-pointer font-Sen outline outline-1">
+			<option value="" selected disabled>Date</option>
+			<option value="latest">Latest</option>
+			<option value="oldest">Oldest</option>
+		</select>
+
+		<select name="salesChannel" id="salesChannel" class="p-1 ml-5 rounded cursor-pointer font-Sen outline outline-1">
+			<option value="" selected disabled>Sales Channel</option>
+			<option value="122 A">122 A</option>
+			<option value="123 B">123 B</option>
+			<option value="124 C">124 C</option>
+		</select>
+
+		<select name="status" id="status" class="p-1 ml-5 rounded cursor-pointer font-Sen outline outline-1">
+			<option value="" selected disabled>Status</option>
+			<option value="pending">Pending</option>
+			<option value="closed">Closed</option>
+		</select>
+
+		<select name="moreFilters" id="moreFilters" class="p-1 ml-5 rounded cursor-pointer font-Sen outline outline-1">
+			<option value="" selected disabled>More Filters</option>
+			<option value="international">International</option>
+			<option value="domestic">Domestic</option>
+		</select>
+	  </div>
     </div>
   </div>
 </template>
