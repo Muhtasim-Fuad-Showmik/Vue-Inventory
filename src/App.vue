@@ -8,17 +8,17 @@ import { RouterLink, RouterView } from "vue-router";
   >
     <div class="flex flex-row min-h-[90vh]">
       <div class="w-80 min-h-[90vh]">
-        <header class="h-full flex flex-col bg-white">
+        <header class="flex flex-col h-full bg-white">
           <div class="bg-brandeis-blue">
-            <a href="/" class="w-full inline-block p-5 bg-white rounded-bl-lg">
+            <a href="/" class="inline-block w-full p-5 bg-white rounded-bl-lg">
               <div class="flex">
                 <img
                   src="/Inventory Logo.png"
                   alt="Inventory Management Logo"
-                  class="w-10 h-12 object-cover"
+                  class="object-cover w-10 h-12"
                 />
                 <span
-                  class="font-Sen font-bold text-xl text-black underline decoration-white flex flex-col ml-5"
+                  class="flex flex-col ml-5 text-xl font-bold text-black underline font-Sen decoration-white"
                 >
                   <p>Inventory</p>
                   <p>Management</p>
@@ -30,7 +30,7 @@ import { RouterLink, RouterView } from "vue-router";
             class="min-h-full m-0 pl-0.5 pt-2 list-none flex-1 text-left bg-brandeis-blue rounded-tr-lg"
           >
             <li
-              class="group block m-0 py-4 px-2.5 border-y-2 transition-all border-transparent hover:border-[#1b82f7]"
+              class="group block m-0 py-4 px-2.5 border-y transition-all border-transparent hover:border-[#1b82f7]"
             >
               <RouterLink
                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5"
@@ -39,7 +39,7 @@ import { RouterLink, RouterView } from "vue-router";
               >
             </li>
             <li
-              class="group block m-0 py-4 px-2.5 border-y-2 transition-all border-transparent hover:border-[#1b82f7]"
+              class="group block m-0 py-4 px-2.5 border-y transition-all border-transparent hover:border-[#1b82f7]"
             >
               <RouterLink
                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5"
@@ -48,7 +48,7 @@ import { RouterLink, RouterView } from "vue-router";
               >
             </li>
             <li
-              class="group block m-0 py-4 px-2.5 border-y-2 transition-all border-transparent hover:border-[#1b82f7]"
+              class="group block m-0 py-4 px-2.5 border-y transition-all border-transparent hover:border-[#1b82f7]"
             >
               <RouterLink
                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5"
@@ -57,7 +57,7 @@ import { RouterLink, RouterView } from "vue-router";
               >
             </li>
             <li
-              class="group block m-0 py-4 px-2.5 border-y-2 transition-all border-transparent hover:border-[#1b82f7]"
+              class="group block m-0 py-4 px-2.5 border-y transition-all border-transparent hover:border-[#1b82f7]"
             >
               <RouterLink
                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5"
@@ -66,7 +66,7 @@ import { RouterLink, RouterView } from "vue-router";
               >
             </li>
             <li
-              class="group block m-0 py-4 px-2.5 border-y-2 transition-all border-transparent hover:border-[#1b82f7]"
+              class="group block m-0 py-4 px-2.5 border-y transition-all border-transparent hover:border-[#1b82f7]"
             >
               <RouterLink
                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5"
@@ -78,13 +78,13 @@ import { RouterLink, RouterView } from "vue-router";
         </header>
       </div>
       <div class="w-full min-h-[90vh]">
-        <div class="p-4 h-full border-b-8 border-solid border-brandeis-blue">
+        <div class="h-full p-4 border-b-8 border-solid border-brandeis-blue">
           <RouterView />
         </div>
       </div>
     </div>
   </main>
-  <footer class="p-4 text-center text-sm">
+  <footer class="p-4 text-sm text-center">
     <a
       href="https://peaceful-sable-131357.netlify.app/"
       target="_blank"
