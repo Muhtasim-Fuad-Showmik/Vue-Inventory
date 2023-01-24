@@ -1,7 +1,19 @@
-<script setup lang="ts">
+<script>
 import Card from '../components/Card.vue';
 import ContentCard from '../components/ContentCard.vue';
 import ChartJSGraph from '../components/ChartJSGraph.vue';
+
+export default {
+    components: {
+        Card,
+        ContentCard,
+        ChartJSGraph
+    },
+    setup(){
+        return {}
+    }
+
+}
 </script>
 
 <template>
