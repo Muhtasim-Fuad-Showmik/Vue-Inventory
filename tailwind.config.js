@@ -6,6 +6,7 @@ module.exports = {
 		extend: {
 			colors: {
 				'ao': '#008000',
+				'arctic-lime': '#e5f01a',
 				'brandeis-blue': '#006ce9',
 				'bright-maroon': '#c9184a',
 				'caribbean-green': '#02c39a',
@@ -14,6 +15,7 @@ module.exports = {
 				'lemon-chiffon-txt': '#423d09',
 				'magic-mint': '#b9fbc0',
 				'magic-mint-txt': '#08360d',
+				'olive': '#808000',
 				'pistachio': '#9ef01a',
 				'plump-purple': '#713fc2',
 				'selective-yellow': '#ffb703',
@@ -24,6 +26,7 @@ module.exports = {
 			},
 			dropShadow: {
 				'std': '2px 2px 5px rgba(0, 0, 0, 1)',
+				'selected': '1px 1px 1px #18b6f6',
 			},
 		},
 		fontFamily: {
