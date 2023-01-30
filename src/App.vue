@@ -3,17 +3,17 @@ import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-    <main class="h-[90vh] my-0 mx-auto bg-white rounded shadow-[0_0_130px_-50px_rgba(0,108,233,1)] overflow-hidden">
-        <div class="flex flex-row min-h-[90vh]">
-            <div class="w-80 min-h-[90vh]">
-                <header class="flex flex-col h-full bg-white">
+    <main class="h-[90vh] my-0 mx-auto bg-white rounded shadow-[0_0_130px_-50px_rgba(0,108,233,1)] overflow-auto w-full">
+        <div class="flex flex-row w-full min-h-[90vh] overflow-auto">
+            <div class="min-w-[200px] min-h-[90vh]">
+                <header class="flex flex-col min-h-full bg-white">
                     <div class="bg-brandeis-blue">
                         <a href="/" class="inline-block w-full p-5 bg-white rounded-bl-lg">
                             <div class="flex">
                                 <img src="/Inventory Logo.png" alt="Inventory Management Logo"
                                     class="object-cover w-10 h-12" />
                                 <span
-                                    class="flex flex-col ml-5 text-xl font-bold text-black underline font-Sen decoration-white">
+                                    class="flex flex-col ml-2 text-xl font-bold text-black underline font-Sen decoration-white">
                                     <p>Inventory</p>
                                     <p>Management</p>
                                 </span>
