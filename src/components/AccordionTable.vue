@@ -39,11 +39,72 @@
                         </div> 
                     </td>
                 </tr>
-                <tr v-if="item.Dependent && item.Dependent.length > 0">
-                    <td colspan="8">Dependent Items</td>
+                <tr class="bg-gradient-to-b from-blue-100 to-white h-2 min-h-[8px]" :class="[item.Selected ? '' : 'hidden']">
+                    <td colspan="8"></td>
+                </tr>
+                <tr v-if="item.Dependent && item.Dependent.length > 0" class="pb-2" :class="[item.Selected ? '' : 'hidden']">
+                    <td colspan="8">
+                        <table
+                            class="w-full text-left border-l-4 border-solid border-brandeis-blue rounded shadow-inner"
+                            cellspacing="0"
+                        >
+                            <tbody>
+                                <tr v-for="(dependentItem, i) in item.Dependent" :key="i" class="shadow" :class="[i !== 0 ? 'border-t border-solid border-neutral-300' : '']">
+                                    <td class="p-2 items-start h-20 px-2 py-1">
+                                        <img
+                                            class="max-w-[80px] max-h-[80px] align-middle"
+                                            :src="dependentItem.ThumbnailPath"
+                                            alt=""
+                                        />
+                                    </td>
+                                    <td class="p-2 items-start h-20 px-2 py-1">
+                                        <div class="font-bold text-left m-0 text-sm w-64 whitespace-nowrap overflow-hidden text-ellipsis">
+                                            {{dependentItem.ItemHeader}}
+                                        </div>
+                                        <div class="text-left m-0 text-sm mt-1">
+                                            {{dependentItem.ItemCode}}
+                                        </div>
+                                    </td>
+                                    <td class="p-2 items-start h-20 px-2 py-1">
+                                        <div class="font-bold text-left m-0 text-sm">
+                                            Pick
+                                        </div>
+                                        <div class="text-left m-0 text-sm mt-1">
+                                            {{dependentItem.Pick}}
+                                        </div>
+                                    </td>
+                                    <td class="p-2 items-start h-20 px-2 py-1">
+                                        <div class="font-bold text-left m-0 text-sm">
+                                            Bin
+                                        </div>
+                                        <div class="text-left m-0 text-sm mt-1">
+                                            {{dependentItem.Bin}}
+                                        </div>
+                                    </td>
+                                    <td class="p-2 items-start h-20 px-2 py-1">
+                                        <div class="font-bold text-left m-0 text-sm">
+                                            Vendor
+                                        </div>
+                                        <div class="text-left m-0 text-sm mt-1">
+                                            {{dependentItem.Vendor}}
+                                        </div>
+                                    </td>
+                                    <td class="p-2 items-start h-20 px-2 py-1">
+                                        <div class="font-bold text-left m-0 text-sm">
+                                            On
+                                            Hand
+                                        </div>
+                                        <div class="text-left m-0 text-sm mt-1">
+                                            {{dependentItem.OnHand}}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
                 </tr>
                 <tr v-else>
-                    <td colspan="8">No details available</td>
+                    <td colspan="8" class="pb-2" :class="[item.Selected ? '' : 'hidden']">No details available</td>
                 </tr>
             </template>
         </tbody>
