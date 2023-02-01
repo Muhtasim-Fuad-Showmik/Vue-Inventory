@@ -40,8 +40,8 @@
             </div>
         </div>
 
-        <div class="flex items-center justify-between my-2">
-            <div class="w-1/2">
+        <div class="grid min-[1400px]:grid-cols-2 grid-cols-1 gap-4 my-2">
+            <div class="w-full">
                 <p class="text-sm">{{ secondaryTitle }}</p>
                 <p class="text-xl font-bold">
                     <span v-if="secondaryValuePrefix">{{
@@ -57,7 +57,7 @@
                     }}</span>
                 </p>
             </div>
-            <div class="w-1/2">
+            <div class="w-full">
                 <p class="text-sm">{{ tertiaryTitle }}</p>
                 <p class="text-xl font-bold">
                     <span v-if="tertiaryValuePrefix">{{
