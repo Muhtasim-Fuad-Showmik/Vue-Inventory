@@ -27,7 +27,7 @@ import { RouterLink, RouterView } from 'vue-router';
                                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5 flex items-center"
                                 to="/">
                                 <span>
-                                    <i class="fa-solid fa-gauge text-2xl mr-5"></i>
+                                    <i class="mr-5 text-2xl fa-solid fa-gauge"></i>
                                 </span>
                                 <span class="max-[600px]:hidden">Dashboard</span>
                             </RouterLink>
@@ -36,9 +36,9 @@ import { RouterLink, RouterView } from 'vue-router';
                             class="group block m-0 py-4 px-2.5 border-y transition-all border-transparent hover:border-[#1b82f7]">
                             <RouterLink
                                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5 flex items-center"
-                                to="/">
+                                to="/products">
                                 <span>
-                                    <i class="fa-solid fa-basket-shopping text-2xl mr-5"></i>
+                                    <i class="mr-5 text-2xl fa-solid fa-basket-shopping"></i>
                                 </span>
                                 <span class="max-[600px]:hidden">Products</span>
                             </RouterLink>
@@ -49,7 +49,7 @@ import { RouterLink, RouterView } from 'vue-router';
                                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5 flex items-center"
                                 to="/procurements">
                                 <span>
-                                    <i class="fa-solid fa-truck-ramp-box text-2xl mr-5"></i>
+                                    <i class="mr-5 text-2xl fa-solid fa-truck-ramp-box"></i>
                                 </span>
                                 <span class="max-[600px]:hidden">Procurement</span>
                             </RouterLink>
@@ -60,7 +60,7 @@ import { RouterLink, RouterView } from 'vue-router';
                                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5 flex items-center"
                                 to="/">
                                 <span>
-                                    <i class="fa-solid fa-warehouse text-2xl mr-5"></i>
+                                    <i class="mr-5 text-2xl fa-solid fa-warehouse"></i>
                                 </span>
                                 <span class="max-[600px]:hidden">Inventory</span>
                             </RouterLink>
@@ -71,7 +71,7 @@ import { RouterLink, RouterView } from 'vue-router';
                                 class="block bg-transparent px-4 py-2 no-underline text-white transition-all group-hover:drop-shadow-std group-hover:translate-x-{-2px} group-hover:-translate-y-0.5 flex items-center"
                                 to="/">
                                 <span>
-                                    <i class="fa-solid fa-chart-pie text-2xl mr-5"></i>
+                                    <i class="mr-5 text-2xl fa-solid fa-chart-pie"></i>
                                 </span>
                                 <span class="max-[600px]:hidden">Analytics</span>
                             </RouterLink>
