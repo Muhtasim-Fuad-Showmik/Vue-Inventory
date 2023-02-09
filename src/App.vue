@@ -3,8 +3,8 @@ import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-    <main class="h-[90vh] my-0 mx-auto bg-white rounded shadow-[0_0_130px_-50px_rgba(0,108,233,1)] w-full">
-        <div class="flex flex-row w-full min-h-[90vh]">
+    <main class="h-[90vh] max-h-[90vh] overflow-hidden my-0 mx-auto bg-white rounded shadow-[0_0_130px_-50px_rgba(0,108,233,1)] w-full">
+        <div class="flex flex-row w-full min-h-[90vh] h-[90vh]">
             <div class="max-[600px]:min-w-[80px] min-w-[200px] min-h-[90vh]">
                 <header class="flex flex-col min-h-full bg-white">
                     <div class="bg-brandeis-blue">
@@ -79,7 +79,7 @@ import { RouterLink, RouterView } from 'vue-router';
                     </ul>
                 </header>
             </div>
-            <div class="w-full min-h-[90vh]">
+            <div class="w-full min-h-[90vh] h-[90vh]">
                 <div class="h-full p-4 border-b-8 border-solid border-brandeis-blue">
                     <RouterView />
                 </div>

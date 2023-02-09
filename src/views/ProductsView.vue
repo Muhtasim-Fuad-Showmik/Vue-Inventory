@@ -1,94 +1,45 @@
 <script>
 import { ref } from 'vue';
-import AccordionTable from '../components/AccordionTable.vue';
+import ProductsTable from '../components/ProductsTable.vue';
 
 export default {
     components: {
-        AccordionTable
+        ProductsTable
     },
     setup() {
         const contentData = ref([
             {
-                OrderID: '#2323',
+                Selected: false,
+                ProductName: 'DJI Mini 3 Pro',
+                ProductCode: 'DJI RC',
+                ThumbnailPath: '/Drone.jpg',
+                Source: 'International',
+                Stock: 5,
+                ExpectedStock: 10,
+                Status: 'available',
+                StatusText: 'Available'
+            },
+            {
                 Selected: true,
-                Date: '23/10/2022',
-                Seller: 'Julia Roberts',
-                SalesChannel: 'Amazon',
-                Source: 'International',
-                Items: 5,
-                Status: 'fulfilled',
-                Dependent: [
-                    {
-                        ThumbnailPath: '/Drone.jpg',
-                        ItemHeader: 'DJI Mini 3 Pro',
-                        ItemCode: 'DJI RC',
-                        Pick: 1,
-                        Bin: 'C011-034',
-                        Vendor: 'DJI',
-                        OnHand: 23
-                    },
-                    {
-                        ThumbnailPath: '/Gaming Chair.webp',
-                        ItemHeader: 'GTRACING Gaming Chair with Footrest',
-                        ItemCode: 'WMT-GT802A-WHITE',
-                        Pick: 3,
-                        Bin: 'C023-6121',
-                        Vendor: 'GTRACING',
-                        OnHand: 13
-                    },
-                    {
-                        ThumbnailPath: '/Laptop Cooler.jpg',
-                        ItemHeader:
-                            'Laptop Cooling Pad, Laptop Cooler with 6 Quiet Led Fans for 15.6-17 Inch Laptop Cooling Fan Stand',
-                        ItemCode: '19019154',
-                        Pick: 2,
-                        Bin: 'LC71-023',
-                        Vendor: 'LIANGSTAR',
-                        OnHand: 18
-                    }
-                ]
-            },
-            {
-                OrderID: '#2324',
-                Selected: false,
-                Date: '31/10/2022',
-                Seller: 'Roberto Gonzales',
-                SalesChannel: 'Alibaba',
+                ProductName: 'GTRACING Gaming Chair with Footrest',
+                ProductCode: 'WMT-GT802A-WHITE',
+                ThumbnailPath: '/Gaming Chair.webp',
                 Source: 'Domestic',
-                Items: 2,
-                Status: 'pending',
-                Dependent: []
+                Stock: 2,
+                ExpectedStock: 100,
+                Status: 'dwindling',
+                StatusText: 'Dwindling'
             },
             {
-                OrderID: '#2325',
                 Selected: false,
-                Date: '17/12/2022',
-                Seller: 'Margaret Thatcher',
-                SalesChannel: 'Ebay',
+                ProductName: 'Laptop Cooling Pad, Laptop Cooler with 6 Quiet Led Fans for 15.6-17 Inch Laptop Cooling Fan Stand',
+                ProductCode: '19019154',
+                ThumbnailPath: '/Laptop Cooler.jpg',
                 Source: 'International',
-                Items: 2,
-                Status: 'unfulfilled',
-                Dependent: [
-                    {
-                        ThumbnailPath: '/Gaming Chair.webp',
-                        ItemHeader: 'GTRACING Gaming Chair with Footrest',
-                        ItemCode: 'WMT-GT802A-WHITE',
-                        Pick: 3,
-                        Bin: 'C023-6121',
-                        Vendor: 'GTRACING',
-                        OnHand: 31
-                    },
-                    {
-                        ThumbnailPath: '/Laptop Cooler.jpg',
-                        ItemHeader:
-                            'Laptop Cooling Pad, Laptop Cooler with 6 Quiet Led Fans for 15.6-17 Inch Laptop Cooling Fan Stand',
-                        ItemCode: '19019154',
-                        Pick: 2,
-                        Bin: 'LC71-023',
-                        Vendor: 'LIANGSTAR',
-                        OnHand: 81
-                    }
-                ]
+                Stock: 0,
+                ExpectedStock: 50,
+                Status: 'outOfStock',
+                StatusText: 'Out of Stock'
             }
         ]);
 
@@ -108,7 +59,7 @@ export default {
 </script>
 
 <template>
-    <div class="w-full h-full">
+    <div class="w-full h-full max-h-full overflow-hidden">
         <div class="flex justify-between max-w-full mb-5 border-b border-solid border-neutral-300">
             <div class="mr-2">
                 <p>Hey Fuad!</p>
@@ -121,12 +72,8 @@ export default {
                     Export to Excel
                 </button>
                 <button
-                    class="inline-block px-5 py-2 mb-0 ml-5 text-sm text-white no-underline transition-all duration-75 ease-in border-0 border-b-4 border-black border-solid rounded-lg cursor-pointer font-Sen w-fit hover:border-b-0 hover:mb-1 hover:translate-y-1 bg-caribbean-green">
-                    Import Orders
-                </button>
-                <button
                     class="inline-block px-5 py-2 mb-0 ml-5 text-sm text-white no-underline transition-all duration-75 ease-in border-0 border-b-4 border-black border-solid rounded-lg cursor-pointer font-Sen w-fit hover:border-b-0 hover:mb-1 hover:translate-y-1 bg-brandeis-blue">
-                    New Order
+                    Place Order
                 </button>
             </div>
         </div>
@@ -139,15 +86,9 @@ export default {
             </div>
 
             <div>
-                <select name="date" id="date" class="p-1 rounded cursor-pointer font-Sen outline outline-1">
-                    <option value="" selected disabled>Date</option>
-                    <option value="latest">Latest</option>
-                    <option value="oldest">Oldest</option>
-                </select>
-
                 <select name="salesChannel" id="salesChannel"
                     class="p-1 ml-5 rounded cursor-pointer font-Sen outline outline-1">
-                    <option value="" selected disabled>Sales Channel</option>
+                    <option value="" selected disabled>Department</option>
                     <option value="122 A">122 A</option>
                     <option value="123 B">123 B</option>
                     <option value="124 C">124 C</option>
@@ -155,8 +96,9 @@ export default {
 
                 <select name="status" id="status" class="p-1 ml-5 rounded cursor-pointer font-Sen outline outline-1">
                     <option value="" selected disabled>Status</option>
-                    <option value="pending">Pending</option>
-                    <option value="closed">Closed</option>
+                    <option value="available">Available Stock</option>
+                    <option value="dwindling">Dwindling Stock</option>
+                    <option value="outOfStock">Out of Stock</option>
                 </select>
 
                 <select name="moreFilters" id="moreFilters"
@@ -168,8 +110,14 @@ export default {
             </div>
         </div>
 
-        <div class="flex justify-between max-w-full p-2 mb-5">
-            <AccordionTable :contentData="contentData" :selections="selections" />
+        <div class="grid min-[1200px]:grid-cols-2 min-[900px]:grid-cols-1 gap-10 max-w-full h-full mb-5">
+            <div class="h-full min-h-full border-r border-solid border-neutral-300">
+                <h2 class="text-xl font-bold mb-5 border-b border-solid border-neutral-300">Departments</h2>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold mb-5 border-b border-solid border-neutral-300">Products</h2>
+                <ProductsTable :contentData="contentData" :selections="selections" />
+            </div>
         </div>
     </div>
 </template>
