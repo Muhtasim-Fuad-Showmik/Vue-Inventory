@@ -16,9 +16,9 @@ export default {
 </script>
 
 <template>
-  <main class="w-full h-full">
+  <main class="w-full h-full max-h-full overflow-hidden">
     <div
-      class="flex justify-between max-w-full mb-5 border-b border-solid border-slate-300"
+      class="flex justify-between max-w-full mb-5 border-b border-solid border-slate-300 max-h-[57px]"
     >
       <div class="mr-5">
         <p>Hey Fuad!</p>
@@ -26,7 +26,7 @@ export default {
       </div>
     </div>
 
-    <div class="overflow-auto">
+    <div class="h-full max-h-[calc(100%-60px)] overflow-auto">
       <div
         class="grid min-[1200px]:grid-cols-3 min-[900px]:grid-cols-2 gap-4 max-w-full mb-5"
       >
